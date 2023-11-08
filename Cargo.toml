@@ -1,0 +1,35 @@
+[package]
+name = "delta_repro"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+wasm = ["wasm-bindgen"]
+
+[dependencies]
+const_format = "0.2.32"
+diffmatchpatch = "0.0.4"
+paste = "1.0.14"
+serde = { version = "1.0.192", features = ["derive"] }
+serde-wasm-bindgen = "0.6.1"
+serde_json = "1.0.108"
+wasm-bindgen = { version = "0.2.84", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.34"
+
+[package.metadata.scripts]
+watch_tests = "cargo watch --clear -x test"
+expand_consts = "cargo expand delta::constants --bin html_to_delta"
+compile_wasm = "wasm-pack build --features wasm"
+watch_compile_wasm = "cargo watch --clear -- wasm-pack build --features wasm"
+compile = "cargo build"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

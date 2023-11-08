@@ -1,0 +1,36 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#948057",
+        "activityBar.background": "#948057",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#afd0c5",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#948057",
+        "statusBar.background": "#746444",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#948057",
+        "statusBarItem.remoteBackground": "#746444",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#746444",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#74644499",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#746444",
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "cSpell.words": [
+        "bindgen",
+        "concatcp",
+        "diffmatchpatch",
+        "partitioner"
+    ],
+    "rust-analyzer.cargo.features": [
+        "wasm"
+    ],
+    "rust-analyzer.restartServerOnConfigChange": true
+}
